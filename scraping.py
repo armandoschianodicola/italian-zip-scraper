@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+import time
+import csv
+import os
 
 my_file = open("cities.txt", "r")
 
@@ -15,41 +18,81 @@ regions_list = data.replace('\n', ' ').split(".")
 print(regions_list)
 my_file.close()
 
-for i, region_text_link in enumerate(regions_list, start=1):
+try:
 
-    print("---------------------------------------------------")
-    print("Region: ", i)
+    # field names
+    fields = [
+        'name',
+        # 'istat_code',
+        'zip'
+    ]
 
-    # get URL
-    page = requests.get("https://it.wikipedia.org/wiki/{}".format(region_text_link))
+    # name of csv file
+    filename = "italian_cities.csv"
 
-    # scrape webpage
-    soup = BeautifulSoup(page.content, 'html.parser')
+    for i, region_text_link in enumerate(regions_list, start=1):
 
-    cities_table = soup.find('table')
+        print("---------------------------------------------------")
+        print("Region: ", i)
 
-    cities_links = cities_table.find_all('a', href=re.compile(r'/wiki/.*'))
+        # get URL
+        page = requests.get("https://it.wikipedia.org/wiki/{}".format(region_text_link))
 
-    cities_links = filter(lambda x: "Provincia_" not in x.get('href'), cities_links)
+        # scrape webpage
+        soup = BeautifulSoup(page.content, 'html.parser')
 
-    for city_link in list(cities_links):
-        print(city_link.get('href'))
+        cities_table = soup.find('table')
 
-        city = requests.get("https://it.wikipedia.org/{}".format(city_link.get('href')))
+        cities_links = cities_table.find_all('a', href=re.compile(r'/wiki/.*'))
 
-        city_soup = BeautifulSoup(city.content, 'html.parser')
+        cities_links = filter(lambda x: "Provincia_" not in x.get('href'), cities_links)
 
-        print(city_soup)
+        time.sleep(3)
 
-        info_table = city_soup.find('table', {"class": "infobox sinottico"})
+        for city_link in list(cities_links):
+            print(city_link.get('href'))
 
-        if info_table is not None:
+            city = requests.get("https://it.wikipedia.org/{}".format(city_link.get('href')))
 
-            zip_code = info_table.find('th', text='Cod. postale').next_sibling.text
+            city_soup = BeautifulSoup(city.content, 'html.parser')
 
-            zip_code = zip_code.replace("\n", "").replace(" ", "")
+            print(city_soup)
 
-        print(city_soup)
+            info_table = city_soup.find('table', {"class": "infobox sinottico"})
 
-    print(cities_links)
-    print(len(cities_links))
+            if info_table is not None:
+
+                zip_code = info_table.find('th', string='Cod. postale').next_sibling.getText()
+
+                zip_code = zip_code.replace("\n", "").replace(" ", "")
+
+                # istat_code = info_table.find('th', string=re.compile(r'Codice*')).next_sibling.getText()
+                #
+                # istat_code = istat_code.replace("\n", "").replace(" ", "")
+
+                city_data = {
+                    'name': city_link.text,
+                    # 'istat_code': istat_code,
+                    'zip': zip_code
+                }
+
+                with open(filename, 'w') as csvfile:
+                    # creating a csv dict writer object
+                    writer = csv.DictWriter(csvfile, fieldnames=fields)
+
+                    # writing headers (field names)
+
+                    if not os.path.isfile(filename):
+                        writer.writeheader()
+
+                    # writing data rows
+                    writer.writerow(city_data)
+
+            print(city_soup)
+
+        print(cities_links)
+        print(len(cities_links))
+
+except Exception as e:
+    print(e)
+    print("Error")
