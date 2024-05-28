@@ -6,9 +6,9 @@ istat_code,name,zip,region
 067001,Alba Adriatica,64011,Abruzzo
 066003,Alfedena,67030,Abruzzo
 069001,Altino,66040,Abruzzo
-067002,Ancarano,64010,Abruzzo
+067002,Ancarano (Italia),64010,Abruzzo
 066004,Anversa degli Abruzzi,67030,Abruzzo
-069002,Archi,66044,Abruzzo
+069002,Archi (comune),66044,Abruzzo
 069003,Ari,66010,Abruzzo
 069004,Arielli,66030,Abruzzo
 067003,Arsita,64031,Abruzzo
@@ -25,7 +25,7 @@ istat_code,name,zip,region
 066011,Bisegna,67050,Abruzzo
 067007,Bisenti,64033,Abruzzo
 068003,Bolognano,65020,Abruzzo
-069006,Bomba,66042,Abruzzo
+069006,Bomba (Italia),66042,Abruzzo
 069007,Borrello,66040,Abruzzo
 068004,Brittoli,65010,Abruzzo
 069008,Bucchianico,66011,Abruzzo
@@ -44,7 +44,7 @@ istat_code,name,zip,region
 066020,Capistrello,67053,Abruzzo
 066021,Capitignano,67014,Abruzzo
 066022,Caporciano,67020,Abruzzo
-066023,Cappadocia,67060,Abruzzo
+066023,Cappadocia (Italia),67060,Abruzzo
 068006,Cappelle sul Tavo,65010,Abruzzo
 068007,Caramanico Terme,65023,Abruzzo
 066024,Carapelle Calvisio,67020,Abruzzo
@@ -58,14 +58,14 @@ istat_code,name,zip,region
 069016,Casalincontrada,66012,Abruzzo
 069017,Casoli,66043,Abruzzo
 067010,Castel Castagna,64030,Abruzzo
-066026,Castel del Monte,67023,Abruzzo
+066026,Castel del Monte (comune),67023,Abruzzo
 066027,Castel di Ieri,67020,Abruzzo
 066028,Castel di Sangro,67031,Abruzzo
 069018,Castel Frentano,66032,Abruzzo
 069019,Castelguidone,66040,Abruzzo
 066029,Castellafiume,67050,Abruzzo
 067011,Castellalto,64020,Abruzzo
-067012,Castelli,64041,Abruzzo
+067012,Castelli (comune italiano),64041,Abruzzo
 066030,Castelvecchio Calvisio,67020,Abruzzo
 066031,Castelvecchio Subequo,67024,Abruzzo
 068009,Castiglione a Casauria,65020,Abruzzo
@@ -77,6 +77,7 @@ istat_code,name,zip,region
 069021,Celenza sul Trigno,66050,Abruzzo
 067015,Cellino Attanasio,64036,Abruzzo
 068011,Cepagatti,65012,Abruzzo
+,Cerchio,,
 067016,Cermignano,64037,Abruzzo
 069022,Chieti,66100,Abruzzo
 068012,Città Sant'Angelo,65013,Abruzzo
@@ -101,22 +102,22 @@ istat_code,name,zip,region
 066041,Corfinio,67030,Abruzzo
 067021,Corropoli,64013,Abruzzo
 067022,Cortino,64040,Abruzzo
-068016,Corvara,65020,Abruzzo
+068016,Corvara (Abruzzo),65020,Abruzzo
 069027,Crecchio,66014,Abruzzo
 067023,Crognaleto,64043,Abruzzo
 068017,Cugnoli,65020,Abruzzo
 069028,Cupello,66051,Abruzzo
 069029,Dogliola,66050,Abruzzo
-068018,Elice,65010,Abruzzo
+068018,Elice (Italia),65010,Abruzzo
 066042,Fagnano Alto,67020,Abruzzo
-069104,Fallo,66040,Abruzzo
+069104,Fallo (Italia),66040,Abruzzo
 067024,Fano Adriano,64044,Abruzzo
 069030,Fara Filiorum Petri,66010,Abruzzo
 069031,Fara San Martino,66015,Abruzzo
 068019,Farindola,65010,Abruzzo
-069032,Filetto,66030,Abruzzo
+069032,Filetto (comune),66030,Abruzzo
 066043,Fontecchio,67020,Abruzzo
-066044,Fossa,67020,Abruzzo
+066044,Fossa (comune),67020,Abruzzo
 069033,Fossacesia,66022,Abruzzo
 069034,Fraine,66050,Abruzzo
 069035,Francavilla al Mare,66023,Abruzzo
@@ -174,7 +175,7 @@ istat_code,name,zip,region
 067032,Notaresco,64024,Abruzzo
 066059,Ocre,67040,Abruzzo
 066060,Ofena,67025,Abruzzo
-066061,Opi,67030,Abruzzo
+066061,Opi (Italia),67030,Abruzzo
 066062,Oricola,67063,Abruzzo
 069057,Orsogna,66036,Abruzzo
 066063,Ortona dei Marsi,67050,Abruzzo
@@ -185,11 +186,11 @@ istat_code,name,zip,region
 069059,Paglieta,66020,Abruzzo
 069060,Palena,66017,Abruzzo
 069061,Palmoli,66050,Abruzzo
-069062,Palombaro,66010,Abruzzo
+069062,Palombaro (Italia),66010,Abruzzo
 067033,Penna Sant'Andrea,64039,Abruzzo
 069063,Pennadomo,66040,Abruzzo
 069064,Pennapiedimonte,66010,Abruzzo
-068027,Penne,65017,Abruzzo
+068027,Penne (Italia),65017,Abruzzo
 069065,Perano,66040,Abruzzo
 066067,Pereto,67064,Abruzzo
 068028,Pescara,da65121a65129,Abruzzo
@@ -216,7 +217,7 @@ istat_code,name,zip,region
 066076,Prezza,67030,Abruzzo
 069070,Quadri,66040,Abruzzo
 066077,Raiano,67027,Abruzzo
-069071,Rapino,66010,Abruzzo
+069071,Rapino (Italia),66010,Abruzzo
 069072,Ripa Teatina,66010,Abruzzo
 066078,Rivisondoli,67036,Abruzzo
 066080,Rocca di Botte,67066,Abruzzo
@@ -235,7 +236,7 @@ istat_code,name,zip,region
 068035,Rosciano,65020,Abruzzo
 069078,Rosello,66040,Abruzzo
 067037,Roseto degli Abruzzi,64026,Abruzzo
-068036,Salle,65020,Abruzzo
+068036,Salle (Italia),65020,Abruzzo
 066085,San Benedetto dei Marsi,67058,Abruzzo
 066086,San Benedetto in Perillis,67020,Abruzzo
 069079,San Buono,66050,Abruzzo
@@ -255,7 +256,7 @@ istat_code,name,zip,region
 069085,Sant'Eusanio del Sangro,66037,Abruzzo
 066090,Sant'Eusanio Forconese,67020,Abruzzo
 066091,Santo Stefano di Sessanio,67020,Abruzzo
-067039,Sant'Omero,64027,Abruzzo
+067039,Sant'Omero (Italia),64027,Abruzzo
 068039,Scafa,65027,Abruzzo
 066093,Scanno,67038,Abruzzo
 069087,Scerni,66020,Abruzzo
