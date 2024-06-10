@@ -4,7 +4,8 @@ import re
 from bs4 import BeautifulSoup
 
 from models.CityFactory import CityFactory
-from models.City import City
+from models.MetropolitanCity import MetropolitanCity
+from models.MinorCity import MinorCity
 
 
 class ItalianRegionCityFactory(CityFactory):
@@ -51,4 +52,8 @@ class ItalianRegionCityFactory(CityFactory):
 
             istat_code = istat_code.replace("\n", "").replace(" ", "")
 
-        return City(city_link.get('title'), zip_code, region, istat_code)
+        if "da" in zip_code:
+
+            return MetropolitanCity(city_link.get('title'), zip_code, region, istat_code)
+
+        return MinorCity(city_link.get('title'), zip_code, region, istat_code)

@@ -13,6 +13,6 @@ class CityFactory(ABC):
         pass
 
     @abstractmethod
-    def create_city(self):
+    def create_city(self, city_link):
 
         pass

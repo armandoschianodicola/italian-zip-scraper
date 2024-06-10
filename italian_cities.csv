@@ -77,7 +77,6 @@ istat_code,name,zip,region
 069021,Celenza sul Trigno,66050,Abruzzo
 067015,Cellino Attanasio,64036,Abruzzo
 068011,Cepagatti,65012,Abruzzo
-,Cerchio,,
 067016,Cermignano,64037,Abruzzo
 069022,Chieti,66100,Abruzzo
 068012,Città Sant'Angelo,65013,Abruzzo
@@ -192,8 +191,6 @@ istat_code,name,zip,region
 069064,Pennapiedimonte,66010,Abruzzo
 068027,Penne (Italia),65017,Abruzzo
 069065,Perano,66040,Abruzzo
-066067,Pereto,67064,Abruzzo
-068028,Pescara,da65121a65129,Abruzzo
 066068,Pescasseroli,67032,Abruzzo
 066069,Pescina,67057,Abruzzo
 066070,Pescocostanzo,67033,Abruzzo
@@ -304,3 +301,6 @@ istat_code,name,zip,region
 066106,Villavallelonga,67050,Abruzzo
 066107,Villetta Barrea,67030,Abruzzo
 066108,Vittorito,67030,Abruzzo
+066033,Cerchio (Italia),67044,Abruzzo
+066067,Pereto,67064,Abruzzo
+068028,Pescara,65120,Abruzzo

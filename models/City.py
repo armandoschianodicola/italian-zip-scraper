@@ -1,8 +1,12 @@
 
-class City:
+from abc import ABC, abstractmethod
+
+
+class City(ABC):
+
     def __init__(self, name, zip_code, region, istat_code):
         self.name = name
-        self.zip = zip_code
+        self.zip = self.get_zip_code(zip_code)
         self.region = region
         self.istat_code = istat_code
 
@@ -16,3 +20,7 @@ class City:
 
     def get_index(self):
         return self.name
+
+    @abstractmethod
+    def get_zip_code(self, zip_code):
+        pass
